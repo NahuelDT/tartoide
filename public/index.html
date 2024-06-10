@@ -3,74 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nahuel Duarte Tau</title>
+  <title>Nahuel Duarte Tau - CV</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <div id="cv-container">
-    <h1>Nahuel Duarte Tau</h1>
-    <p>Phone: (+54) 1173676603</p>
-    <p>Email: nahuelduartetau@gmail.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/duartetaunahuel" target="_blank">duartetaunahuel</a></p>
-    
-    <h2>About Me</h2>
-    <p>I am an I.T professional and self-driven learner with a passion for understanding complex interconnected systems from the low level up to the business impact. What I enjoy most about my job is facing diverse challenging problems and making each day different.</p>
-    
-    <h2>Experience</h2>
-    <h3>Backend Software Engineer, Yuno (Remote) - Aug 2022 – Present</h3>
-    <ul>
-      <li>Engineered robust backend systems using AWS OpenSearch, leveraging Opensearch and AWS services such as EC2, Lambda, SQS, Cloudwatch, S3, CDK and Kinesis to centralize and enhance log monitoring capabilities across various services and microservices, contributing to the overall security and efficiency of backend operations.</li>
-      <li>Development of high-performance security solutions utilizing Golang and Python, focusing on creating automated systems and advanced security features that underpin the security infrastructure while ensuring seamless backend integration.</li>
-      <li>Development and maintenance of key payment microservices using Go and Kotlin, focusing on RESTful API services via Spring Boot and efficient cache management with Redis. This work significantly improved system scalability and reliability, aligning with high-performance standards for our payments solutions architecture.</li>
-      <li>Developed a custom Kotlin logger integrating SLF4J, significantly enhancing traceability across all microservices. This innovation provided a critical boost in operational visibility, greatly improving our ability to monitor and troubleshoot distributed systems.</li>
-    </ul>
-    
-    <h3>Backend Software Engineer, PedidosYa (subsidiary from DeliveryHero), AMER - Jan 2022 – Aug 2022 (10 mos)</h3>
-    <ul>
-      <li>Developed a server-driven UI architecture in Kotlin, enhancing maintainability and aligning backend functionalities with mobile requirements through Domain Driven Design.</li>
-      <li>Integrated and developed online payment methods, including Tigo Money and PedidosYa wallet, streamlining transaction processes and expanding payment options.</li>
-    </ul>
-    
-    <h3>Developer Support Engineer, Auth0, AMER - May 2021 – Dec 2021 (10 mos)</h3>
-    <ul>
-      <li>Write sample code, technical articles, and tutorials on some of the basic to intermediate level use cases using Auth0 SDKs.</li>
-      <li>Support and maintain developer/customer Auth0 accounts with knowledge of HTTP, encryption, security concepts, understanding of authentication and authorization concepts, and knowledge of protocols/specifications: OAuth2, OIDC, SAML, WS-FED, LDAP, Azure AD, etc.</li>
-    </ul>
-    
-    <h3>Security Software Engineer, MercadoLibre, Argentina - June 2019 – May 2021 (2 yrs)</h3>
-    <ul>
-      <li>Specialized in microservices-oriented backend development, creating scalable applications in Golang and Python for data extraction (from AWS S3, NGINX, MySQL), analysis, classification, and inventory. Enhanced alert API for improved scalability and integration with new data sources.</li>
-      <li>Developed automated systems for detecting and analyzing abnormal usage of internal tools like AWS S3, Google Drive, and Dropbox, focusing on both internal and external user behavior.</li>
-    </ul>
-    
-    <h3>Jr Software Engineer, Baires Dev, Argentina - Jan 2019 – June 2019</h3>
-    <ul>
-      <li>Developed LinkedIn scraper with TypeScript and gathered feedback from the client throughout various stages, which led to the identification and resolution of critical bugs, enhancing overall client satisfaction and product reliability.</li>
-      <li>Automated key internal processes, including securing access to the internal ERP system, streamlining MySQL database interactions, and optimizing JIRA ticket handling.</li>
-    </ul>
-    
-    <h3>Software Engineer Intern, COA S.A, Argentina - Jul 2018 – Dec 2018</h3>
-    <ul>
-      <li>Debugging and refining middleware, facilitating seamless communication between bank and interbank ATM networks (e.g., LINK and Banelco), thereby improving transaction reliability and speed across networks.</li>
-      <li>On-site installation and configuration of middleware solutions for clients, further providing comprehensive training to ensure proficient management and optimal utilization of the software.</li>
-    </ul>
-    
-    <h2>Education</h2>
-    <p>Universidad Tecnologica Nacional, BS and MS in Information Systems (Completed 12 credits towards MS), Aug. 2016 – Dec 2018</p>
-    
-    <h2>Technical Skills</h2>
-    <p>Languages: Kotlin, Go, Python, SQL.</p>
-    <p>Technologies/Other Knowledge: AWS, Redis, Spring Boot, Docker, Git, HTTP.</p>
-  </div>
-  
-  <div id="chat-container">
-    <input type="text" id="user-input" placeholder="Type a message..." />
-    <button id="send-btn">Send</button>
-    <div id="chat-output"></div>
-  </div>
-  
-  <script src="/js/chat.js"></script>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Nahuel Duarte Tau</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Me Section -->
+  <section id="about" class="pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="your-photo.jpg" alt="Nahuel Duarte Tau" class="img-fluid rounded-circle mb-3">
+        </div>
+        <div class="col-md-8">
+          <h2>About Me</h2>
+          <p>I am an I.T professional and self-driven learner...</p>
+          <p><a href="https://linkedin.com/in/duartetaunahuel" target="_blank">LinkedIn</a></p>
+          <p><a href="mailto:nahuelduartetau@gmail.com" target="_blank">Email</a></p>
+          <p><a href="https://discordapp.com/users/your-discord-id" target="_blank">Discord</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="pt-5">
+    <div class="container">
+      <h2>Resume</h2>
+      <!-- Your resume content here -->
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="pt-5">
+    <div class="container">
+      <h2>Projects</h2>
+      <!-- Your projects content here -->
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section id="contact" class="pt-5">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
