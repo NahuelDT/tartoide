@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #chat-container {
+      width: 80%;
+      max-width: 600px;
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    #user-input {
+      width: calc(100% - 60px);
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+    }
+    #send-btn {
+      width: 50px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    #send-btn:hover {
+      background-color: #45a049;
+    }
+    #chat-output {
+      margin-top: 20px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    #chat-output p {
+      margin: 5px 0;
+    }
+    .user-message {
+      color: #4CAF50;
+    }
+    .bot-message {
+      color: #FFD700;
+    }
+  </style>
+</head>
+<body>
+  <div id="chat-container">
+    <input type="text" id="user-input" placeholder="Type a message..." />
+    <button id="send-btn">Send</button>
+    <div id="chat-output"></div>
+  </div>
+  <script>
+    const sendBtn = document.getElementById('send-btn');
+    sendBtn.addEventListener('click', async () => {
+      const userInput = document.getElementById('user-input').value;
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userInput }),
+      });
+      const data = await response.json();
+      const chatOutput = document.getElementById('chat-output');
+      chatOutput.innerHTML += `<p class="user-message">User: ${userInput}</p><p class="bot-message">Bot: ${data.reply}</p>`;
+    });
+  </script>
+</body>
+</html>
+
