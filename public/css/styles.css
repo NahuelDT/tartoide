@@ -1,72 +1,100 @@
+/* General Styles */
 body {
-  background-color: black;
-  color: white;
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
+  background-color: #121212;
+  color: #f4f4f4;
 }
 
+/* Container */
 #cv-container {
-  padding: 20px;
   max-width: 800px;
-  margin: auto;
-}
-
-h1, h2, h3 {
-  color: #FFD700;
-}
-
-a {
-  color: #4CAF50;
-}
-
-#chat-container {
-  width: 80%;
-  max-width: 600px;
-  background-color: #333;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin: 20px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
-#user-input {
-  width: calc(100% - 60px);
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
+/* Header */
+h1 {
+  text-align: center;
+  color: #FF5733;
+  font-size: 2.5em;
+  margin-bottom: 0;
+}
+
+h2 {
+  border-bottom: 2px solid #FF5733;
+  padding-bottom: 5px;
   margin-bottom: 10px;
 }
 
-#send-btn {
-  width: 50px;
+h3 {
+  margin-top: 20px;
+  color: #FF5733;
+}
+
+p, ul, li {
+  font-size: 1.1em;
+  color: #d3d3d3;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Links */
+a {
+  color: #FF5733;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Chat Section */
+#chat-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#user-input {
+  width: calc(100% - 80px);
   padding: 10px;
-  border-radius: 5px;
+  margin-right: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+#send-btn {
+  padding: 10px 20px;
+  background-color: #FF5733;
+  color: #fff;
   border: none;
-  background-color: #4CAF50;
-  color: white;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 #send-btn:hover {
-  background-color: #45a049;
+  background-color: #FF4500;
 }
 
 #chat-output {
   margin-top: 20px;
   max-height: 300px;
   overflow-y: auto;
-}
-
-#chat-output p {
-  margin: 5px 0;
-}
-
-.user-message {
-  color: #4CAF50;
-}
-
-.bot-message {
-  color: #FFD700;
+  border-top: 1px solid #333;
+  padding-top: 10px;
 }
 
