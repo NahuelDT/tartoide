@@ -3,81 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatbot</title>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    #chat-container {
-      width: 80%;
-      max-width: 600px;
-      background-color: #333;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-    #user-input {
-      width: calc(100% - 60px);
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      margin-bottom: 10px;
-    }
-    #send-btn {
-      width: 50px;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
-    }
-    #send-btn:hover {
-      background-color: #45a049;
-    }
-    #chat-output {
-      margin-top: 20px;
-      max-height: 300px;
-      overflow-y: auto;
-    }
-    #chat-output p {
-      margin: 5px 0;
-    }
-    .user-message {
-      color: #4CAF50;
-    }
-    .bot-message {
-      color: #FFD700;
-    }
-  </style>
+  <title>Nahuel Duarte Tau - CV</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+  <div id="cv-container">
+    <h1>Nahuel Duarte Tau</h1>
+    <p>Email: nahuelduartetau@gmail.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/duartetaunahuel" target="_blank">duartetaunahuel</a></p>
+    
+    <h2>About Me</h2>
+    <p>I am an I.T professional and self-driven learner with a passion for understanding complex interconnected systems from the low level up to the business impact. What I enjoy most about my job is facing diverse challenging problems and making each day different.</p>
+    
+    <h2>Experience</h2>
+    <h3>Backend Software Engineer, Yuno (Remote) - Aug 2022 – Present</h3>
+    <ul>
+      <li>Engineered robust backend systems using AWS OpenSearch, leveraging Opensearch and AWS services such as EC2, Lambda, SQS, Cloudwatch, S3, CDK and Kinesis to centralize and enhance log monitoring capabilities across various services and microservices, contributing to the overall security and efficiency of backend operations.</li>
+      <li>Development of high-performance security solutions utilizing Golang and Python, focusing on creating automated systems and advanced security features that underpin the security infrastructure while ensuring seamless backend integration.</li>
+      <li>Development and maintenance of key payment microservices using Go and Kotlin, focusing on RESTful API services via Spring Boot and efficient cache management with Redis. This work significantly improved system scalability and reliability, aligning with high-performance standards for our payments solutions architecture.</li>
+      <li>Developed a custom Kotlin logger integrating SLF4J, significantly enhancing traceability across all microservices. This innovation provided a critical boost in operational visibility, greatly improving our ability to monitor and troubleshoot distributed systems.</li>
+    </ul>
+    <!-- Add other experiences similarly -->
+    
+    <h2>Education</h2>
+    <p>Universidad Tecnologica Nacional, BS and MS in Information Systems (Completed 12 credits towards MS), Aug. 2016 – Dec 2018</p>
+    
+    <h2>Technical Skills</h2>
+    <p>Languages: Kotlin, Go, Python, SQL.</p>
+    <p>Technologies/Other Knowledge: AWS, Redis, Spring Boot, Docker, Git, HTTP.</p>
+  </div>
+  
   <div id="chat-container">
     <input type="text" id="user-input" placeholder="Type a message..." />
     <button id="send-btn">Send</button>
     <div id="chat-output"></div>
   </div>
-  <script>
-    const sendBtn = document.getElementById('send-btn');
-    sendBtn.addEventListener('click', async () => {
-      const userInput = document.getElementById('user-input').value;
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userInput }),
-      });
-      const data = await response.json();
-      const chatOutput = document.getElementById('chat-output');
-      chatOutput.innerHTML += `<p class="user-message">User: ${userInput}</p><p class="bot-message">Bot: ${data.reply}</p>`;
-    });
-  </script>
+  
+  <script src="/js/chat.js"></script>
 </body>
 </html>
 
